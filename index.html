@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-family: Roboto, sans-serif;
+    color: #f1fade;
+  }
+  .counter {
+    display: flex;
+    align-items: center;
+    gap: 6vmin;
+  }
+  .count {
+    min-width: 28vmin;
+    text-align: center;
+    font-size: 20vmin;
+    font-weight: bold;
+  }
+  button {
+    width: 20vmin;
+    height: 20vmin;
+    padding: 0;
+    font-size: 12vmin;
+    line-height: 1;
+    border: none;
+    border-radius: 100%;
+    background: #bf4d0f;
+    transparency:50%;
+    color: #f1fade;
+    cursor: pointer;
+  }
+  button:hover { background: #bf4d0f; transparency:0%; }
+</style>
+</head>
+<body>
+  <div class="counter">
+    <button id="minus">−</button>
+    <div class="count" id="count">0</div>
+    <button id="plus">+</button>
+  </div>
+  <script>
+    let n = 25;
+    const el = document.getElementById('count');
+    document.getElementById('plus').onclick = () => { n++; el.textContent = n; };
+    document.getElementById('minus').onclick = () => { n--; el.textContent = n; };
+  </script>
+</body>
+</html>
